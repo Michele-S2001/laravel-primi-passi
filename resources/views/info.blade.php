@@ -7,6 +7,12 @@
 </head>
 <body>
   <h1>{{ $title }}</h1>
+  <nav class="navbar">
+    <ul class="navbar__links">
+      <li><a href="{{ route('home') }}">Home</a></li>
+      <li><a href="{{ route('about') }}">About</a></li>
+    </ul>
+  </nav>
   <ul>
     @foreach ($socials as $social)
       <li>
