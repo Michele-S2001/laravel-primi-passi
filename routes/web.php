@@ -21,3 +21,36 @@ Route::get('/', function () {
 
     return view('home', $data);
 });
+
+Route::get('/about', function () {
+
+    $data = [
+        'title' => 'You\'re on about page!, let\'s talk about mee',
+        'name' => 'Michele'
+    ];
+
+    return view('about', $data);
+})->name('about');
+
+Route::get('/info', function () {
+
+    $data = [
+        'title' => 'You\'re on info page!, here you can find all my social contacts',
+        'socials' => [
+            [
+                'name' => 'Instagram',
+                'link' => '#'
+            ],
+            [
+                'name' => 'Facebook',
+                'link' => '#'
+            ],
+            [
+                'name' => 'Telegram',
+                'link' => '#'
+            ]
+        ]
+    ];
+
+    return view('info', $data);
+})->name('info');

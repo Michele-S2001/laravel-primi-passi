@@ -7,5 +7,11 @@
 </head>
 <body>
   <h1>{{ $title }}</h1>
+  <nav class="navbar">
+    <ul class="navbar__links">
+      <li><a href="{{ route('about') }}">About</a></li>
+      <li><a href="{{ route('info') }}">Info</a></li>
+    </ul>
+  </nav>
 </body>
 </html>
